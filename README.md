@@ -1,26 +1,30 @@
-# GT06 客户端功能
+# GT06 Client Features
 
-## 修订历史
+## Revision History
 
-| Version |   Date     |   Author   |   Change expression   |
-| :------ | ---------- | ---------- | --------------------- |
-| 1.0.0   | 2022-07-12 | 孙健       | 初始版本               |
+| Version | Date | Author | Change Description |
+| :--- | --- | --- | --- |
+| 1.0.0 | 2022-07-12 | Sun Jian | Initial Version |
 
-## GT06 介绍
+## GT06 Introduction
 
-### 功能概述
+### Functional Overview
 
-该项目实现了GT06协议**客户端**功能, 用户可直接使用该功能与对应服务端进行标准内的数据交互。
+This project implements the **client** functionality of the GT06 protocol. Users can directly use this feature to perform standard data interaction with the corresponding server.
+### Main Features
 
-### 主要功能
+- Server connection
+- Terminal login
+- Terminal GPS & LBS positioning information reporting
+- Terminal device status information reporting
+- Server instruction issuance and response
 
-- 服务器连接
-- 终端登录
-- 终端GPS&LBS定位信息上报
-- 终端设备状态信息上报
-- 服务端指令下发与应答
+### Remarks
 
-### 备注
+- The GT06 protocol specifies relatively few messages. This project only implements basic message functions. Custom messages from different service platforms require secondary development, and extended messages also require interface adjustments.
+- QuecPython has not implemented Unicode name escaping, while GT06 server downlink messages contain Unicode encoded data. Therefore, escaping cannot be performed; please take note of this.
 
-- GT06协议规定的消息较少, 该项目只实现了基础的消息功能, 不同的服务平台自定义的消息需要进行二次开发, 扩展的消息也需要进行接口调整。
-- QuecPython未实现Unicode名称转义, 而GT06服务端下发消息中有unicode编码数据, 因此进行无法转移, 此处需要注意。
+# TODO
+- Make server works
+    - translate to async + uvloop
+- Testss

@@ -1,9 +1,10 @@
 # ChangeLog
 
-此项目的所有显着更改都将记录在此文件中。
+All notable changes to this project will be documented in this file.
 
 ## [v1.0.0] - 2022-07-12
 
 ### Added
 
-- 上传GT06协议客户端功能接口
+- Uploaded GT06 protocol client functional interfaces.
+
